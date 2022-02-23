@@ -8,6 +8,9 @@ provider "template" {
 
 resource "aws_instance" "foo" {
 
+  tags = {
+    yor_trace = "293da8c2-80cf-43cb-847d-52436b47acc4"
+  }
 }
 
 resource "null_resource" "foo" {
