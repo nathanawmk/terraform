@@ -15,4 +15,7 @@ resource "aws_instance" "foo" {
   provisioner "shell" {
     command = "echo ${var.password} > secrets"
   }
+  tags = {
+    yor_trace = "a59dba6a-9eff-4155-8354-12f4735edd07"
+  }
 }

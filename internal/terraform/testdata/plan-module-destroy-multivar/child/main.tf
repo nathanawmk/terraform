@@ -4,5 +4,8 @@ variable "instance_count" {
 
 resource "aws_instance" "foo" {
   count = "${var.instance_count}"
-  bar = "bar"
+  bar   = "bar"
+  tags = {
+    yor_trace = "de24511c-aed1-4a5e-9fb9-b1a021f366a3"
+  }
 }

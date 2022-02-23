@@ -1,4 +1,7 @@
 resource "aws_instance" "foo" {
+  tags = {
+    yor_trace = "c66666ad-bb0c-4aaf-9db3-4642ee563c9e"
+  }
 }
 
 output "instance_id" {

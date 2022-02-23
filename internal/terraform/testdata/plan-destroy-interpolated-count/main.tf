@@ -4,6 +4,9 @@ variable "list" {
 
 resource "aws_instance" "a" {
   count = length(var.list)
+  tags = {
+    yor_trace = "ee7d84ec-0817-4868-baf0-4562e1382dba"
+  }
 }
 
 locals {
@@ -12,7 +15,7 @@ locals {
 
 module "empty" {
   source = "./mod"
-  input = zipmap(var.list, local.ids)
+  input  = zipmap(var.list, local.ids)
 }
 
 output "out" {
